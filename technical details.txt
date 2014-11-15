@@ -1,0 +1,3 @@
+C:\Users\alice\Documents\lightup-app\common> sencha app build testing
+cd build\testing\LightUp
+sencha web start

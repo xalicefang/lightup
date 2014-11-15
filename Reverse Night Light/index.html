@@ -1,0 +1,71 @@
+<style>
+#circuit {
+}
+
+.wire {
+	position:absolute;
+	width:300px;
+}
+
+#t {
+	top:110px;
+	left:332px;
+}
+
+#l {
+	top:285px;
+	left:125px;
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+}
+
+#r {
+	top:285px;
+	left:550px;
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+}
+
+#b {
+	top:460px;
+	left:332px;
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+}
+
+
+</style>
+<div id="slow">
+<img src="electronflow_slow.svg" class="wire" id = "t">
+<img src="electronflow_slow.svg" class="wire" id = "l">
+<img src="electronflow_slow.svg" class="wire" id = "r">
+<img src="electronflow_slow.svg" class="wire" id = "b">
+</div>
+
+<div id="medium">
+<img src="electronflow_medium.svg" class="wire" id = "t">
+<img src="electronflow_medium.svg" class="wire" id = "l">
+<img src="electronflow_medium.svg" class="wire" id = "r">
+<img src="electronflow_medium.svg" class="wire" id = "b">
+</div>
+
+<div id="fast">
+<img src="electronflow_fast.svg" class="wire" id = "t">
+<img src="electronflow_fast.svg" class="wire" id = "l">
+<img src="electronflow_fast.svg" class="wire" id = "r">
+<img src="electronflow_fast.svg" class="wire" id = "b">
+</div>
+
+<div id="veryFast">
+<img src="electronflow_veryfast.svg" class="wire" id = "t">
+<img src="electronflow_veryfast.svg" class="wire" id = "l">
+<img src="electronflow_veryfast.svg" class="wire" id = "r">
+<img src="electronflow_veryfast.svg" class="wire" id = "b">
+</div>
+
+<img src="Reverse Night Light Circuit.svg" id ="circuit">
+
+<script>
+
+document.getElementById("medium").style.display ="none";
+document.getElementById("fast").style.display ="none";
+document.getElementById("veryFast").style.display ="none";
+
+</script>
