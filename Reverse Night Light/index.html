@@ -1,6 +1,12 @@
 <style>
+
+.container {
+	position:relative;
+}
+
 #circuit {
 	height:100%;
+	float:left;
 }
 
 .wire {
@@ -21,7 +27,7 @@
 
 #r {
 	top:47vh;
-	left:88vh;
+	left:89vh;
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 }
 
@@ -33,35 +39,41 @@
 
 
 </style>
-<div id="slow">
-<img src="electronflow_slow.svg" class="wire" id = "t">
-<img src="electronflow_slow.svg" class="wire" id = "l">
-<img src="electronflow_slow.svg" class="wire" id = "r">
-<img src="electronflow_slow.svg" class="wire" id = "b">
-</div>
 
-<div id="medium">
-<img src="electronflow_medium.svg" class="wire" id = "t">
-<img src="electronflow_medium.svg" class="wire" id = "l">
-<img src="electronflow_medium.svg" class="wire" id = "r">
-<img src="electronflow_medium.svg" class="wire" id = "b">
-</div>
+<div class="container">
 
-<div id="fast">
-<img src="electronflow_fast.svg" class="wire" id = "t">
-<img src="electronflow_fast.svg" class="wire" id = "l">
-<img src="electronflow_fast.svg" class="wire" id = "r">
-<img src="electronflow_fast.svg" class="wire" id = "b">
-</div>
+	<div id="slow">
+	<img src="electronflow_slow.svg" class="wire" id = "t">
+	<img src="electronflow_slow.svg" class="wire" id = "l">
+	<img src="electronflow_slow.svg" class="wire" id = "r">
+	<img src="electronflow_slow.svg" class="wire" id = "b">
+	</div>
 
-<div id="veryFast">
-<img src="electronflow_veryfast.svg" class="wire" id = "t">
-<img src="electronflow_veryfast.svg" class="wire" id = "l">
-<img src="electronflow_veryfast.svg" class="wire" id = "r">
-<img src="electronflow_veryfast.svg" class="wire" id = "b">
-</div>
+	<div id="medium">
+	<img src="electronflow_medium.svg" class="wire" id = "t">
+	<img src="electronflow_medium.svg" class="wire" id = "l">
+	<img src="electronflow_medium.svg" class="wire" id = "r">
+	<img src="electronflow_medium.svg" class="wire" id = "b">
+	</div>
 
-<img src="Reverse Night Light Circuit.svg" id ="circuit">
+	<div id="fast">
+	<img src="electronflow_fast.svg" class="wire" id = "t">
+	<img src="electronflow_fast.svg" class="wire" id = "l">
+	<img src="electronflow_fast.svg" class="wire" id = "r">
+	<img src="electronflow_fast.svg" class="wire" id = "b">
+	</div>
+
+	<div id="veryFast">
+	<img src="electronflow_veryfast.svg" class="wire" id = "t">
+	<img src="electronflow_veryfast.svg" class="wire" id = "l">
+	<img src="electronflow_veryfast.svg" class="wire" id = "r">
+	<img src="electronflow_veryfast.svg" class="wire" id = "b">
+	</div>
+
+	<div >
+		<img src="Reverse Night Light Circuit.svg" id ="circuit">
+	</div>
+</div>
 
 <script>
 
