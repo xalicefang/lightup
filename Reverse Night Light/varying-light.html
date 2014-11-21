@@ -5,6 +5,9 @@
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <style>
+	.ui-page {
+		background-color:transparent !important;
+	}
 
 	.wrap {
 		position:relative;
@@ -203,7 +206,7 @@
 	<div id="slider-vertical" style="height:100%;"></div> -->
 
 <div data-role="controlgroup">
-<legend>Light amount:</legend>
+<a data-role="button" id="vh" data-theme='b' class="ui-disabled">Light amount:</a>
 <a data-role="button" id="vh">Very high</a>
 <a data-role="button" id="h">High</a>
 <a data-role="button" id="m">Medium</a>
