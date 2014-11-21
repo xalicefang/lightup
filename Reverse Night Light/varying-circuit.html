@@ -1,8 +1,8 @@
 <head>
 
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <style>
 
@@ -38,35 +38,36 @@
 	}
 
 	.light-slider {
+		padding-top:5%;
 		height:80%;
 		float:left;
 	}
 
 	.wire {
 		position:absolute;
-		width:45vh;
+		width:52vh;
 	}
 
 	#t {
-		top:21vh;
-		left:57vh;
+		top:18vh;
+		left:54vh;
 	}
 
 	#l {
-		top:47vh;
-		left:27vh;
+		top:48vh;
+		left:18vh;
 	    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
 	}
 
 	#r {
-		top:47vh;
+		top:48vh;
 		left:89vh;
 	    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
 	}
 
 	#b {
-		top:74vh;
-		left:57vh;
+		top:77vh;
+		left:53vh;
 	    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 	}
 
@@ -213,16 +214,22 @@
 </div>
 
 <div class="light-slider">
-	<p>
-	  <label for="amount">Light:</label>
-	</p>
-	 
-	<div id="slider-vertical" style="height:100%;"></div>
+<div data-role="controlgroup">
+<legend>Light amount:</legend>
+<a data-role="button" id="vh">Very high</a>
+<a data-role="button" id="h">High</a>
+<a data-role="button" id="m">Medium</a>
+<a data-role="button" id="low">Low</a>
+<a data-role="button" id="vl">Very low</a>
+</div>
+
 </div>
 
 </div>
 
 <script>
+
+
 
 function updateSpeed(sliderVal) {
 	var newSpeed = (100-sliderVal)/10 + 2;
@@ -235,22 +242,44 @@ function updateSpeed(sliderVal) {
 
 }
 
- $(function() {
-    $( "#slider-vertical" ).slider({
-      orientation: "vertical",
-      range: "min",
-      min: 0,
-      max: 100,
-      value: 100,
-      slide: function( event, ui ) {
-        $("#radialGradient-2")[0].setAttribute('r', ui.value + "%");
-        updateSpeed(ui.value);
-      }
-    });
-    var sliderVal =  $( "#slider-vertical" ).slider( "value" );
-    $("#radialGradient-2")[0].setAttribute('r', sliderVal + "%");
-    updateSpeed(sliderVal);
-  });
+$( "#vh" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 100 + "%");
+  updateSpeed(100);
+});
+$( "#h" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 80 + "%");
+  updateSpeed(80);
+});
+$( "#m" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 60 + "%");
+  updateSpeed(60);
+});
+$( "#low" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 40 + "%");
+  updateSpeed(40);
+});
+$( "#vl" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 20 + "%");
+  updateSpeed(20);
+});
+
+
+ // $(function() {
+ //    $( "#slider-vertical" ).slider({
+ //      orientation: "vertical",
+ //      range: "min",
+ //      min: 0,
+ //      max: 100,
+ //      value: 100,
+ //      slide: function( event, ui ) {
+ //        $("#radialGradient-2")[0].setAttribute('r', ui.value + "%");
+ //        updateSpeed(ui.value);
+ //      }
+ //    });
+ //    var sliderVal =  $( "#slider-vertical" ).slider( "value" );
+ //    $("#radialGradient-2")[0].setAttribute('r', sliderVal + "%");
+ //    updateSpeed(sliderVal);
+ //  });
 
 
 </script>

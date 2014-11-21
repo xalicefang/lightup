@@ -1,8 +1,8 @@
 <head>
 
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <style>
 
@@ -38,6 +38,7 @@
 	}
 
 	.light-slider {
+		padding-top:5%;
 		height:80%;
 		float:left;
 	}
@@ -195,31 +196,69 @@
 </div>
 
 <div class="light-slider">
-	<p>
+<!-- 	<p>
 	  <label for="amount">Light:</label>
 	</p>
 	 
-	<div id="slider-vertical" style="height:100%;"></div>
+	<div id="slider-vertical" style="height:100%;"></div> -->
+
+<div data-role="controlgroup">
+<legend>Light amount:</legend>
+<a data-role="button" id="vh">Very high</a>
+<a data-role="button" id="h">High</a>
+<a data-role="button" id="m">Medium</a>
+<a data-role="button" id="low">Low</a>
+<a data-role="button" id="vl">Very low</a>
+</div>
+
 </div>
 
 </div>
 
 <script>
 
- $(function() {
-    $( "#slider-vertical" ).slider({
-      orientation: "vertical",
-      range: "min",
-      min: 0,
-      max: 100,
-      value: 100,
-      slide: function( event, ui ) {
-        $("#radialGradient-2")[0].setAttribute('r', ui.value + "%");
-      }
-    });
-    var sliderVal =  $( "#slider-vertical" ).slider( "value" );
-    $("#radialGradient-2")[0].setAttribute('r', sliderVal + "%");
-  });
+$( "#vh" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 100 + "%");
+});
+$( "#h" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 80 + "%");
+});
+$( "#m" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 60 + "%");
+});
+$( "#low" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 40 + "%");
+});
+$( "#vl" ).click(function() {
+  $("#radialGradient-2")[0].setAttribute('r', 20 + "%");
+});
+
+// $( "#slider-1" ).on( "slidestart", function( event, ui ) {
+// console.log("asdf");
+// } );
+
+// $( "#vert" ).slider({
+//   start: function( event, ui ) {
+//   	console.log(ui.value);
+//   	// $("#radialGradient-2")[0].setAttribute('r', ui.value + "%");
+//   }
+// });
+
+
+ // $(function() {
+ //    $( "#slider-vertical" ).slider({
+ //      orientation: "vertical",
+ //      range: "min",
+ //      min: 0,
+ //      max: 100,
+ //      value: 100,
+ //      slide: function( event, ui ) {
+ //        $("#radialGradient-2")[0].setAttribute('r', ui.value + "%");
+ //      }
+ //    });
+ //    var sliderVal =  $( "#slider-vertical" ).slider( "value" );
+ //    $("#radialGradient-2")[0].setAttribute('r', sliderVal + "%");
+ //  });
 
 
 </script>
